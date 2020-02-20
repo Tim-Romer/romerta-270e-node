@@ -1,0 +1,11 @@
+::ffff:10.8.0.58 - GET / HTTP/1.1 200 699 - 28.277 ms
+::ffff:10.8.0.58 - GET /favicon.ico HTTP/1.1 404 758 - 4.887 ms
+::ffff:10.8.0.58 - GET / HTTP/1.1 304 - - 3.938 ms
+::ffff:10.8.0.58 - GET /about HTTP/1.1 200 774 - 3.060 ms
+::ffff:10.8.0.58 - GET / HTTP/1.1 304 - - 3.032 ms
+::ffff:10.8.0.58 - GET / HTTP/1.1 200 699 - 2.732 ms
+::ffff:10.8.0.58 - GET /favicon.ico HTTP/1.1 404 758 - 3.201 ms
+::ffff:10.8.0.58 - GET / HTTP/1.1 200 699 - 2.837 ms
+::ffff:10.32.1.53 - GET / HTTP/1.1 200 699 - 3.019 ms
+::ffff:10.32.1.53 - GET /favicon.ico HTTP/1.1 404 758 - 2.443 ms
+::ffff:10.32.1.53 - GET /asdf HTTP/1.1 404 758 - 7.849 ms

@@ -1,0 +1,20 @@
+<%# This is the view for the main page. It will display all entry details if there are some and if there aren't, it will prompt the user to enter a new entry %>
+<% include header %>
+<% if (entries.length) { %>
+  <% entries.forEach(function(entry) { %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="text-muted pull-right">
+          <%= entry.published %>
+        </div>
+        <%= entry.title %>
+      </div>
+      <div class="panel-body">
+        <%= entry.body %><br>
+	By: <%=entry.name %>
+      </div>
+    </div>
+  <% }) %>
+<% } else { %>   No entries! <a href="/new-entry">Add one!</a>
+<% } %>
+<% include footer %>

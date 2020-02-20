@@ -1,0 +1,46 @@
+<% include header %>
+<div class='container'>
+<h1>Student Test Performance Data</h1>
+
+<div id="filter">
+<form method='post' action='/'>
+<label for="math">Math Score Min:</label>
+<input type='range' name='math' min="0" max="100" value='<%= math %>' style='width: 70%;display: inline-block'> <label for='math'><%= math %> </label>
+<br>
+<label for="writing">Writing Min Score:</label>
+<input type='range' name='writing' min="0" max="100" value='<%= writing %>' style="width: 70%; display: inline-block"> <label for="writing"><%= writing %></label>
+<br>
+<label for="reading">Reading Min Score:</label>
+<input type='range' name='reading' min="0" max="100" value='<%= reading %>' style="width: 70%; display: inline-block"> <label for="reading"><%= reading %></label>
+<br>
+
+<input type='submit'>
+</form>
+
+
+
+</div>
+<div id="results" style="margin-top: 20px;">
+<table class="table">
+<thead><tr><th>ParentEducation</th><th>Num Students</th></tr></thead>
+<tbody>
+<tr><td>Masters</td><td><%= counts[0].parentEducation.masters %></td></tr>
+<tr><td>Bachelors</td><td><%= counts[1].parentEducation.bachelors%></td></tr>
+<tr><td>Asssociate</td><td><%= counts[2].parentEducation.associates %></td></tr>
+<tr><td>Some College</td><td><%= counts[3].parentEducation.someCollege %></td></tr>
+<tr><td>High School</td><td><%= counts[4].parentEducation.highSchool %></td></tr>
+<tr><td>Some High School</td><td><%= counts[5].parentEducation.someHighSchool %></td></tr>
+<thead><tr><th>Lunch</td></tr></thead>
+<tr><td>standard</td><td><%= counts[6].lunch.standard %></td></tr>
+<tr><td>free/reduced</td><td><%= counts[7].lunch.free %></td></tr>
+<thead><tr><th>Test Prep</td></tr></thead>
+<tr><td>None</td><td><%= counts[8].testPrep.none %></td></tr>
+<tr><td>Yes</td><td><%= counts[9].testPrep.completed %></td></tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+<% include footer %>

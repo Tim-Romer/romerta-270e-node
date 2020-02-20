@@ -1,0 +1,47 @@
+<%# This is the view that will show all current games that are in progress. %>
+
+<%- include('header.ejs') %>
+
+<table class = "table">
+  <tr>
+    <th>Game #</th>
+    <th>Player1 Name</th>
+    <th>Player2 Name</th>
+    <th>Number of moves</th>
+    <th>Current State</th>
+    <th>Time of Last Move</th>
+    <th>board</th>
+  </tr>
+  <% var count = 1; %>
+  <% games.forEach(function(game) { %>
+  <tr>
+    <td><%= count++ %></td>
+    <td><%= game.player1Name %></td>
+    <td><%= game.player2Name %></td>
+    <td><%= game.moveCnt %></td>
+    <td><%= game.state %></td>
+    <td><%= game.lastMoveTime %></td>
+    <td>
+      <table>
+        <tr>
+	  <td><%= game.board[0] %></td>
+	  <td><%= game.board[1] %></td>
+	  <td><%= game.board[2] %></td>
+        </tr>
+        <tr>
+          <td><%= game.board[3] %></td>
+          <td><%= game.board[4] %></td>
+          <td><%= game.board[5] %></td>
+        </tr>
+        <tr>
+	  <td><%= game.board[6] %></td>
+	  <td><%= game.board[7] %></td>
+	  <td><%= game.board[8] %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <% }); %>
+</table>
+
+<%- include('footer.ejs') %>

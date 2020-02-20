@@ -1,0 +1,21 @@
+<%# This is the view for showing all games taht have been orphaned %>
+
+<%- include('header.ejs') %>
+
+<table class = "table">
+  <tr>
+    <th>Game #</th>
+    <th>Player1 Name</th>
+    <th>Time of Creation</th>
+  </tr>
+  <% var count = 1; %>
+  <% games.forEach(function(game) { %>
+  <tr>
+    <td><%= count++ %></td>
+    <td><%= game.player1Name %></td>
+    <td><%= game.gameCreated %></td>
+  </tr>
+  <% }); %>
+</table>
+
+<%- include('footer.ejs') %>

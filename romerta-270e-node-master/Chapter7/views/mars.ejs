@@ -1,0 +1,31 @@
+<%# The mars html file. This file lists the photos on a specified date for the specified rover %>
+
+<%- include("header.ejs") %>
+
+<table class = "table">
+  <tr>
+    <th>ID</th>
+    <th>Earth Date</th>
+    <th>Camera Full Name</th>
+    <th>Image Source</th>
+  </tr>
+  <% photos.forEach(function(photo) { %>
+  <tr>
+    <td> <%= photo.id %> </td>
+    <td> <%= photo.earth_date %> </td>
+    <td> <%= photo.camera.full_name %> </td>
+    <td> <a href="<%= photo.img_src %>"><%= photo.img_src %> </td>
+  </tr>
+  <% }); %>
+</table>
+<% var curr = parseInt(photos[0].sol); var prev = curr - 1; var next = curr + 1; var rover = photos[0].rover.name.toLowerCase();%>
+<div class = "container">
+  <div class = "text-lg-center">
+    <a href = "/mars/<%= rover %>/<%= prev %>">Previous Sol</a>
+    <a href = "/mars/<%= rover %>/<%= curr %>">Current Sol</a>
+    <% if (next <= photos[0].rover.max_sol) { %> 
+    <a href = "/mars/<%= rover %>/<%= next %>">Next Sol</a>
+    <% } %>
+  </div>
+</div>
+<%- include("footer.ejs") %>

@@ -1,0 +1,22 @@
+<%# This is the view for filling out the form for clearing records %>
+
+<%- include('header.ejs') %>
+
+<div class = "container" id = "centerdiv">
+  <div class = "row">
+    <form action = "/clear/games" method = "POST">
+      <div>
+	<label for = "date">Enter date where records before should be removedL</label>
+	<input type = "date" name  = "date" id = "date" value = "date">
+      </div>
+      <div>
+	<label for = "password">Enter the password to clear records:</label>
+	<input type = "password" name = "password" id = "password" value = "password">
+      </div>
+      <div>
+	<input type = "submit" id = "submit" name =  "submit value = "submit>
+      </div>
+    </form>
+  </div>
+</div> 
+<%- include('footer.ejs') %>

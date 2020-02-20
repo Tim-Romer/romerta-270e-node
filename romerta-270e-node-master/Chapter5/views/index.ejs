@@ -1,0 +1,17 @@
+<%# Index.html. This is the view the user gets when they use teh "/" url %>
+<% include header %>
+
+<h1>What's your ZIP code?</h1>
+
+<form id="indexForm" class="pure-form">
+  <fieldset>
+    <input type="number" name="zip" placeholder="12345" autofocus required>
+    <input type="submit" class="pure-button pure-button-primary" value="Go">
+  </fieldset>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/the.js"></script>
+
+<a href="/summary">Daily Summary</a>
+<% include footer %>

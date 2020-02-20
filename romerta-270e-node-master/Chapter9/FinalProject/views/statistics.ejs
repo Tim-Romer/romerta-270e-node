@@ -1,0 +1,24 @@
+<%# The view file for the statistics of the game. %>
+
+<%- include('header.ejs') %>
+
+<table class = "table">
+  <tr>
+    <th>Player</th>
+    <th>Games won</th>
+    <th>Games lost</th>
+    <th>Games tied</th>
+  </tr>
+  <% records.forEach(function(record) { %>  
+  <tr>
+    <td> <%= record.name %> </td>
+    <td> <%= record.won %> </td>
+    <td> <%= record.lost %> </td>
+    <td> <%= record.stalemate %> </td>
+  </tr>
+  <% }); %>
+</table>
+
+
+
+<%- include('footer.ejs') %>

@@ -1,0 +1,22 @@
+<%# Index file for the main page for the web app. Lists the rovers. %>
+
+<%- include('header.ejs') %>
+
+<table class = "table">
+  <tr>
+    <th>Rover ID</th>
+    <th>Rover Name</th>
+    <th>Maximum Sol Date</th>
+  </tr>
+  <% rovers.forEach(function(rover) { %>
+  <tr>
+    <td> <%= rover.id %> </td>
+    <td> 
+	<a href="/mars/<% var name = rover.name.toLowerCase(); %><%= name %>"> <%= rover.name %> </a> 
+    </td>
+    <td> <%= rover.max_sol %> </td>
+  </tr>
+  <% }); %>
+</table>
+
+<%- include('footer.ejs') %>

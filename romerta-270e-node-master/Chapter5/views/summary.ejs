@@ -1,0 +1,17 @@
+<%# The view when the user goes to "/summary". This is for the weather summary. %>
+<% include header %>
+
+<h1>What's your ZIP code?</h1>
+
+<form id="summaryForm" class="pure-form">
+  <fieldset>
+    <input type="number" name="zip" placeholder="12345" autofocus required>
+    <input type="submit" class="pure-button pure-button-primary" value="Go">
+  </fieldset>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/the.js"></script>
+
+<a href="/">Main</a>
+<% include footer %>

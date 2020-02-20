@@ -1,0 +1,17 @@
+/*
+ * Author: Tim Romer
+ * Date: 1-15-2020
+ * Class: CSE 270E
+ * Assignment: Module 10 Assignment
+*/
+
+html {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

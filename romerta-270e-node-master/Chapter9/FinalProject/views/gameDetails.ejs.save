@@ -1,0 +1,12 @@
+<%# This is the file for managing all of the different boards %>
+
+<%- include('header.ejs') %>
+
+<table>
+  <tr>
+    <th>Game</th>
+    <th>
+  </tr>
+</table>
+
+<%- include('footer.ejs') %>
