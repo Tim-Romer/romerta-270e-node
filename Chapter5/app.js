@@ -13,7 +13,7 @@ var ForecastIo = require("forecastio");
 
 // Instantiate an express object and a weather object.
 var app = express();
-var weather = new ForecastIo("88537b2c6052ed438c656ffc4c7cb956");
+var weather = new ForecastIo("API KEY INSERT HERE");
 
 // Including static files in the public directory.
 app.use(express.static(path.resolve(__dirname, "public")));
